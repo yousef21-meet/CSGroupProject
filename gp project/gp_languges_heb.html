@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"  href="gp.css">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div> <a href="#"><img src="https://fontmeme.com/permalink/200304/71fb90992e510899369845f9962dc764.png" alt="graffiti-fonts" border="0"></a>
+  </div>
+
+
+
+<div class="input">
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="which word do you want to translate?" title="Type in a name">
+</div>
+<div id="myUL"> 
+<ul >
+  <li><a href="file:///home/student/Desktop/gp%20project/AHLA.html">אחלה</a></li>
+  <li><a href="file:///home/student/Desktop/gp%20project/sababa.html">סבבה</a></li>
+  <li><a href="file:///home/student/Desktop/gp%20project/zariz.html">זריז</a></li>
+  <li><a href="file:///home/student/Desktop/gp%20project/snuck%20in.html">התפלח</a></li>
+  <li><a href="file:///home/student/Desktop/gp%20project/emale.html">אמאלה</a></li>
+  
+</ul>
+</div>
+
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
